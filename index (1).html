@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10131c" />
+  <meta name="description" content="KaryaMuda — prototipe marketplace jasa digital untuk pelajar kreatif dan UMKM." />
+  <title>KaryaMuda — Ide Jalan, Karya Menghasilkan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#beranda" aria-label="KaryaMuda beranda"><span class="brand-mark">K</span><span>Karya<span>Muda</span></span></a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#layanan">Jelajahi jasa</a>
+        <a href="#cara-kerja">Cara kerja</a>
+        <a href="#validasi">Uji ide</a>
+        <button class="button button-primary button-small nav-cta" id="navOrder">Mulai proyek <span aria-hidden="true">↗</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="beranda">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Ruang tumbuh kreator muda</div>
+          <h1>Ide kamu jalan.<br /><span class="gradient-text">Karyamu menghasilkan.</span></h1>
+          <p class="hero-copy">Temukan jasa desain, website, dan konten dari kreator muda untuk kebutuhan UMKM, organisasi sekolah, dan proyek personal. Mulai dari brief yang jelas—bukan bingung harus mencari siapa.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#layanan">Jelajahi layanan <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="#ai-helper">Bantu pilih layanan <span aria-hidden="true">✦</span></a>
+          </div>
+          <div class="micro-note"><span aria-hidden="true">ⓘ</span><span><b>Prototipe bisnis pelajar.</b> Harga dan paket pada halaman ini adalah contoh untuk menguji minat pasar, bukan penawaran dari vendor terverifikasi.</span></div>
+        </div>
+        <div class="showcase" aria-label="Pratinjau contoh hasil desain">
+          <div class="showcase-glow"></div>
+          <div class="showcase-card">
+            <div class="showcase-head">
+              <div><strong>Ruang Karya</strong><small>Contoh proyek kreatif</small></div>
+              <div class="avatar-stack" aria-label="Contoh tim kreator"><span class="avatar">D</span><span class="avatar">A</span><span class="avatar">R</span></div>
+            </div>
+            <div class="project-preview"><span class="tiny-label">Brand starter kit</span><h3>BUAT IDE<br />JADI NYATA.</h3><p>Visual yang bicara untuk bisnismu.</p></div>
+            <div class="work-meta"><span>✦ Desain identitas visual</span><span class="price-pill">Mulai Rp50 rb</span></div>
+          </div>
+          <div class="float-tag float-one"><span>✦</span><div>Brief lebih jelas<br /><small style="color:var(--muted);font-weight:500">dibantu asisten ide</small></div></div>
+          <div class="float-tag float-two"><span>↗</span><div>Belajar sambil berkarya<br /><small style="color:var(--muted);font-weight:500">portofolio untuk kreator</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container trust-strip" aria-label="Keunggulan konsep">
+      <span>✓ <b>Harga contoh transparan</b></span>
+      <span>✦ Cocok untuk kebutuhan kecil</span>
+      <span>↗ Bantu kreator membangun portofolio</span>
+    </div>
+
+    <section class="section" id="layanan">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Temukan bantuan</div><h2>Proyekmu mulai dari sini.</h2></div>
+          <p>Pilih kebutuhan, lihat kisaran harga, lalu buat brief supaya calon kreator memahami proyek yang kamu perlukan.</p>
+        </div>
+        <div class="search-area">
+          <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Cari desain poster, website, video..." aria-label="Cari layanan" /></label>
+          <div class="chips" role="group" aria-label="Filter kategori">
+            <button class="chip active" data-filter="all" aria-pressed="true">Semua</button>
+            <button class="chip" data-filter="desain" aria-pressed="false">Desain</button>
+            <button class="chip" data-filter="web" aria-pressed="false">Website</button>
+            <button class="chip" data-filter="video" aria-pressed="false">Video</button>
+            <button class="chip" data-filter="branding" aria-pressed="false">Branding</button>
+          </div>
+        </div>
+        <div class="service-grid" id="serviceGrid" aria-live="polite"></div>
+        <p class="disclaimer">Catatan: harga, durasi, dan semua paket adalah asumsi awal untuk menguji kebutuhan pelanggan. Sepakati ruang lingkup, revisi, tenggat, dan pembayaran langsung dengan penyedia jasa sebelum transaksi.</p>
+      </div>
+    </section>
+
+    <section class="ai-section" id="ai-helper">
+      <div class="container">
+        <div class="ai-panel">
+          <div class="ai-copy">
+            <div class="ai-icon" aria-hidden="true">✦</div>
+            <div class="section-kicker">Asisten ide • Demo</div>
+            <h2>Belum tahu harus memilih yang mana?</h2>
+            <p>Ceritakan tujuanmu. Asisten akan menyarankan kategori layanan dan membantu mengubah kebutuhan yang masih samar menjadi langkah awal yang lebih jelas.</p>
+            <p class="disclaimer">Versi ini memakai pencocokan kata kunci di browser, bukan model AI generatif sungguhan. Data tidak dikirim ke layanan AI eksternal.</p>
+          </div>
+          <form class="ai-form" id="aiForm">
+            <div class="field"><label for="needInput">Apa yang ingin kamu capai?</label><textarea id="needInput" required placeholder="Contoh: Saya punya usaha minuman dan ingin promosi di Instagram..."></textarea></div>
+            <div class="ai-row">
+              <div class="field" style="margin-bottom:0"><label for="budgetInput">Perkiraan anggaran</label><select id="budgetInput"><option value="any">Belum ditentukan</option><option value="50000">Maks. Rp50.000</option><option value="150000">Rp50.000–Rp150.000</option><option value="300000">Rp150.000–Rp300.000</option><option value="500000">Di atas Rp300.000</option></select></div>
+              <button class="button button-primary" type="submit">Cari saran <span aria-hidden="true">✦</span></button>
+            </div>
+            <div class="ai-result" id="aiResult" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cara-kerja" style="padding-top:0">
+      <div class="container">
+        <div class="section-head"><div><div class="section-kicker">Cara kerja</div><h2>Dari kebutuhan ke brief.</h2></div><p>Alur sederhana untuk membuat permintaan jasa lebih terarah. Prototipe ini belum menangani pembayaran maupun pencocokan vendor otomatis.</p></div>
+        <div class="how-grid">
+          <article class="how-card"><div class="step-number">01</div><h3>Pilih kebutuhan</h3><p>Tentukan hasil yang kamu butuhkan dan gunakan asisten untuk menemukan kategori layanan yang paling relevan.</p></article>
+          <article class="how-card"><div class="step-number">02</div><h3>Tulis brief</h3><p>Jelaskan tujuan, gaya, tenggat, dan anggaran. Brief yang rinci membantu mengurangi salah paham.</p></article>
+          <article class="how-card"><div class="step-number">03</div><h3>Sepakati proyek</h3><p>Hubungi penyedia jasa, tinjau contoh karya, dan sepakati detail serta cara pembayaran sebelum mulai bekerja.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="validasi" style="padding-top:0">
+      <div class="container validation-grid">
+        <div>
+          <div class="section-kicker">Validasi pasar</div>
+          <h2>Mulai dari bukti kecil, bukan asumsi besar.</h2>
+          <p style="color:var(--muted)">Masalah yang ingin diuji: UMKM dan organisasi sekolah memerlukan jasa digital dengan proses pemesanan yang mudah, sedangkan pelajar kreatif membutuhkan cara menampilkan karya dan mendapat klien.</p>
+          <div class="status-note"><span aria-hidden="true">◷</span><div><strong>Status saat ini: hipotesis</strong><p>Ide ini belum dapat disebut tervalidasi sebelum calon pelanggan diwawancarai dan minat membayar diuji secara nyata.</p></div></div>
+          <div class="validation-steps">
+            <div class="validation-step"><span class="check">1</span><div><h3>Wawancarai 5 calon pembeli</h3><p>Misalnya pemilik usaha kecil, panitia acara, OSIS, atau organisasi sekolah. Tanyakan pengalaman terakhir mereka mencari jasa desain/konten.</p></div></div>
+            <div class="validation-step"><span class="check">2</span><div><h3>Tawarkan paket dengan harga nyata</h3><p>Jangan hanya bertanya “bagus tidak?”. Tanyakan apakah mereka akan memesan paket tertentu, kapan, dan apa yang membuat mereka ragu.</p></div></div>
+            <div class="validation-step"><span class="check">3</span><div><h3>Ubah berdasarkan respons</h3><p>Sinyal awal yang layak ditindaklanjuti: beberapa calon pelanggan meminta penawaran, memberikan brief, atau bersedia mencoba proyek berbayar.</p></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="survey-card">
+            <div class="section-kicker">Tes singkat • Demo lokal</div>
+            <h3>Kalau membutuhkan jasa digital, apa yang paling penting bagimu?</h3>
+            <p>Jawaban ini membantu menentukan hal yang perlu ditanyakan saat riset calon pengguna.</p>
+            <form id="surveyForm">
+              <div class="radio-list">
+                <label class="radio-option"><input type="radio" name="priority" value="Harga terjangkau" required /> Harga yang terjangkau</label>
+                <label class="radio-option"><input type="radio" name="priority" value="Contoh portofolio" /> Contoh portofolio yang meyakinkan</label>
+                <label class="radio-option"><input type="radio" name="priority" value="Cepat dan tepat waktu" /> Pengerjaan cepat dan tepat waktu</label>
+                <label class="radio-option"><input type="radio" name="priority" value="Brief dan pemesanan mudah" /> Proses brief dan pemesanan yang mudah</label>
+              </div>
+              <button class="button button-secondary" type="submit">Simpan jawaban demo</button>
+            </form>
+            <p class="survey-note" id="surveyStatus">Penting: jawaban hanya tersimpan di browser/perangkat ini dan tidak terkirim ke pembuat website. Ini belum menjadi data riset pasar.</p>
+          </div>
+          <div class="survey-card">
+            <h3>Model pendapatan yang bisa diuji</h3>
+            <p><b style="color:var(--text)">Komisi transaksi:</b> persentase dari proyek yang berhasil diselesaikan.</p>
+            <p><b style="color:var(--text)">Paket promosi:</b> kreator membayar untuk menampilkan layanan unggulan, setelah platform punya pengguna aktif.</p>
+            <p style="margin-bottom:0"><b style="color:var(--text)">Paket bundel:</b> gabungan poster, template media sosial, dan landing page untuk usaha kecil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container"><div class="cta-inner"><div><h2>Punya proyek yang ingin diwujudkan?</h2><p>Buat brief pertamamu. Kamu tidak harus tahu istilah desain—mulai dari tujuanmu saja.</p></div><button class="button" id="customOrder">Ceritakan proyek <span aria-hidden="true">↗</span></button></div></div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><a class="brand" href="#beranda"><span class="brand-mark">K</span><span>Karya<span>Muda</span></span></a><p>Prototipe pembelajaran kewirausahaan digital • Dibuat dengan HTML, CSS, dan JavaScript.</p><p>© <span id="year"></span> KaryaMuda — konsep demo.</p></div></footer>
+
+  <dialog id="orderDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-head"><div><h2 id="dialogTitle">Mulai proyek</h2><p>Isi informasi dasar agar kebutuhanmu lebih mudah dipahami.</p></div><button class="close-button" id="closeDialog" aria-label="Tutup dialog">×</button></div>
+    <div class="dialog-body">
+      <div id="orderFormWrap">
+        <div class="selected-service"><div><small>Layanan yang dipilih</small><strong id="selectedServiceName">Proyek khusus</strong></div><span class="selected-price" id="selectedServicePrice">Diskusi dulu</span></div>
+        <form id="orderForm">
+          <div class="form-grid">
+            <div class="field"><label for="customerName">Nama *</label><input id="customerName" name="customerName" required maxlength="80" placeholder="Nama kamu" /></div>
+            <div class="field"><label for="customerContact">Kontak yang bisa dihubungi *</label><input id="customerContact" name="customerContact" required maxlength="100" placeholder="WhatsApp / email" /></div>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="customerType">Kebutuhan untuk</label><select id="customerType"><option>Usaha / UMKM</option><option>Organisasi sekolah</option><option>Proyek pribadi</option><option>Lainnya</option></select></div>
+            <div class="field"><label for="customerBudget">Anggaran</label><select id="customerBudget"><option>Belum ditentukan</option><option>Di bawah Rp50.000</option><option>Rp50.000–Rp150.000</option><option>Rp150.000–Rp300.000</option><option>Di atas Rp300.000</option></select></div>
+          </div>
+          <div class="field"><label for="customerBrief">Ceritakan kebutuhanmu *</label><textarea id="customerBrief" required maxlength="1200" placeholder="Tujuan proyek, gaya yang disukai, tenggat, ukuran/output, dan detail lain..."></textarea></div>
+          <div class="form-actions"><button class="button button-primary" type="submit">Siapkan brief <span aria-hidden="true">↗</span></button><button class="button button-secondary" type="button" id="cancelOrder">Batal</button></div>
+          <p class="form-help">Demo ini tidak mengirim pesanan ke server. Brief disimpan secara lokal pada browser ini agar alurnya dapat dicoba.</p>
+        </form>
+      </div>
+      <div class="confirmation" id="orderConfirmation" aria-live="polite">
+        <h3>Brief kamu siap!</h3><p>Salin brief ini untuk dikirim ke calon penyedia jasa. Pesanan belum benar-benar terkirim atau terkonfirmasi.</p>
+        <div class="order-summary" id="orderSummary"></div>
+        <div class="form-actions" style="margin-top:14px"><button class="button button-primary" id="copyBrief" type="button">Salin brief</button><button class="button button-secondary" id="sendWhatsApp" type="button">Buka WhatsApp</button><button class="button button-secondary" id="newOrder" type="button">Buat brief baru</button></div>
+        <p class="form-help">Agar tombol WhatsApp berfungsi, isi nomor penjual di konstanta <code>WHATSAPP_NUMBER</code> pada bagian JavaScript di bawah. Gunakan kode negara tanpa tanda + atau spasi.</p>
+      </div>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
